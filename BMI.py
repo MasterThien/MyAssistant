@@ -64,13 +64,14 @@ def Status_History():
             break    
 
 			#Define function to speak and display your status
-def Speak(diagnosis = "None",advice = "None",name = "None",R_BMI = "None",age = "None",continent = "None"):
+def Speak(diagnosis = None,advice = None,name = None,R_BMI = None,age = None,continent = None):
 	robot_mouth.say("".join(['You are', diagnosis, "And here is some of our advice for you "]))
 	robot_mouth.runAndWait() 
 	sg.PopupNonBlocking("".join(["Your name : ", name, "\nYour age: " ,str(age) ,"\nFrom / Nationality: " , continent, 
 		"\n....................................." ,
 		"\n\nYour BMI result: " , str(R_BMI) , (" kg/m2"),
-		"\n\nYour body status: " , diagnosis , "\n\nOur advice for you:\n" , advice]))
+		"\n\nYour body status: " , diagnosis , "\n\nOur advice for you:\n" , advice]),
+        auto_close = True, auto_close_duration = 90)#Auto close after 90 seconds, you can change it 
 
 
     
@@ -89,9 +90,10 @@ layout= [[sg.Text(d1,font = 'font')],
         [sg.Input()],
         [sg.Button('Enter'),sg.Button('Making Plot'),sg.Button('Status History'), sg.Exit()],
         ]        
+
 sg.theme('LightBlue4')# background color & If the GUI doesn't respose, change the theme color as this color sometimes sucks 
 sg.set_options(font=("Maven Pro", 14))
-window = sg.Window('Your Body Status', layout,size = (445,430))# Display command
+window = sg.Window('Your Body Status', layout,size = (445,395),resizable=True)# Display command(Note: Width - Height = 50 )
 
 				#Main Program
 while True:
