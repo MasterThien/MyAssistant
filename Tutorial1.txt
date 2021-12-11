@@ -1,0 +1,11 @@
+# Firstly, Thank you for using my application
+# This is the tutorial of how to use it properly
+-  When you first open the aplication, a small window will appear 
+-  And you have to type in some information about your name, your age,... and then "Enter" it
+-  Don't worry, I am not gonna take your information 
+-  Instead, it's will be saved on your computer as a .csv file called Body Mass Index.csv
++ which would take 1-2 kbytes of your storage
+
+-  There are 2 more functions called :
++ Making Plot which will create a graph of your BMI day by day
++ Status History which will literally show you your BMI history so you can check your old BMI. 
