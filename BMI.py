@@ -65,12 +65,12 @@ def Status_History():
 
 			#Define function to speak and display your status
 def Speak(diagnosis = None,advice = None,name = None,R_BMI = None,age = None,continent = None):
-	robot_mouth.say("".join(['You are', diagnosis, "And here is some of our advice for you "]))
+	robot_mouth.say("".join(['You are', diagnosis, "And here are some of our advices for you "]))
 	robot_mouth.runAndWait() 
 	sg.PopupNonBlocking("".join(["Your name : ", name, "\nYour age: " ,str(age) ,"\nFrom / Nationality: " , continent, 
 		"\n....................................." ,
 		"\n\nYour BMI result: " , str(R_BMI) , (" kg/m2"),
-		"\n\nYour body status: " , diagnosis , "\n\nOur advice for you:\n" , advice]),
+		"\n\nYour body status: " , diagnosis , "\n\nOur advices for you:\n" , advice]),
         auto_close = True, auto_close_duration = 90)#Auto close after 90 seconds, you can change it 
 
 
